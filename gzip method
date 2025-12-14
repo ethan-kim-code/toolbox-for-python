@@ -1,0 +1,11 @@
+import gzip
+
+text = b"Python is cool! " * 10
+
+# Compress
+compressed = gzip.compress(text)
+print("Compressed size:", len(compressed))
+
+# Decompress
+decompressed = gzip.decompress(compressed)
+print(decompressed.decode())
